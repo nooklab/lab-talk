@@ -25,10 +25,14 @@ export const Speech = props => {
     }
 
     return <>
-        {charList.map((chat, index) => {
-            return <div class="chatMessage" key={index}>{chat}</div>
-        })}
+        {
+            charList.map((chat, index) => {
+            return <>
+                <dir>CHat1:</dir><div className="chatMessage" key={index}>{chat}</div>
+            </>
+            })
+        }
         <input type="text" id="myInput" ref={textInput} onChange={onTextChange}></input>
-        <button type="button" onClick={onClickAdd}>Add</button>
+        <button type="button" onClick={onClickAdd}>Add2</button>
     </>
 }
